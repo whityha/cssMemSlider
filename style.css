@@ -7,32 +7,35 @@ html {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .wrapper {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 1rem;
-    margin-top: 100px;
-    padding: 70px;
+    margin-top: 5rem;
+    padding: 3vw;
     border-radius: 10px;
     background-color: #25282a;
 }
+
 .wrapper label {
     display: flex;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
     background-color: transparent;
     border-radius: 6.25rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    align-self: center;
+    justify-self: end;
 }
 
 .wrapper label .round {
-    width: 1.25rem;
-    height: 1.25rem;
-    border: .24rem solid rgb(111, 156, 207);
+    width: .9rem;
+    height: .9rem;
+    border: .15rem solid rgb(111, 156, 207);
     border-radius: 6.25rem;
     background-color: rgb(111, 156, 207);
     transition: .4s;
@@ -109,26 +112,26 @@ input[type='radio'] {
     justify-content: center;
 }
 .img-1 {
-    height: 30rem;
+    height: 30vw;
     background: center / cover no-repeat url('./images/mem-1.jpg');
 }
 .img-2 {
-    height: 30rem;
+    height: 30vw;
     background: bottom center / cover no-repeat url('./images/mem-2.jpg');
 }
 .img-3 {
-    height: 30rem;
+    height: 30vw;
     background: center / cover no-repeat url('./images/mem-3.jpg');
 }
 .img-4 {
-    height: 30rem;
-    background: center no-repeat url('./images/mem-4.jpg');
+    height: 30vw;
+    background: center top no-repeat url('./images/mem-4.jpg');
 }
-.wrapper .slider-text {
-    width: 60%;
+.wrapper .slider-text {    
     max-height: 3rem;
     overflow: hidden;
     line-height: 1;
+    flex-grow: 1;
 }
 .wrapper .slider-text .text-wrapper {
     width: 100%;
@@ -139,4 +142,18 @@ input[type='radio'] {
 .wrapper .slidet-text .text-wrapper p {
     display: flex;
     width: 100%;
+    margin: 1rem;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        justify-content: center;
+    }
+    .wrapper .slider-text {
+        order: 4;
+        width: 100%;
+    }
+    .img-4 {
+        background: center top / cover no-repeat url('./images/mem-4.jpg');
+    }
 }
