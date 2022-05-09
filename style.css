@@ -112,20 +112,20 @@ input[type='radio'] {
     justify-content: center;
 }
 .img-1 {
-    height: 30vw;
+    height: 35vw;
     background: center / cover no-repeat url('./images/mem-1.jpg');
 }
 .img-2 {
-    height: 30vw;
+    height: 35vw;
     background: bottom center / cover no-repeat url('./images/mem-2.jpg');
 }
 .img-3 {
-    height: 30vw;
+    height: 35vw;
     background: center / cover no-repeat url('./images/mem-3.jpg');
 }
 .img-4 {
-    height: 30vw;
-    background: center top no-repeat url('./images/mem-4.jpg');
+    height: 35vw;
+    background: center top / cover no-repeat url('./images/mem-4.jpg');
 }
 .wrapper .slider-text {    
     max-height: 3rem;
@@ -152,8 +152,14 @@ input[type='radio'] {
     .wrapper .slider-text {
         order: 4;
         width: 100%;
+        max-height: 2rem;
+    }
+    .wrapper .slider-text p {
+        margin: 0;
+        margin-bottom: 1rem;
     }
     .img-4 {
         background: center top / cover no-repeat url('./images/mem-4.jpg');
     }
+
 }
