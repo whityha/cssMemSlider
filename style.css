@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+    margin-top: 5rem;
+    padding: 3vw;
+    border-radius: .6rem;
+    background-color: #25282a;
+}
+
+.wrapper label {
+    display: flex;
+    width: 1.9rem;
+    height: 1.9rem;
+    background-color: transparent;
+    border-radius: 6.25rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    align-self: center;
+    justify-self: end;
+}
+
+.wrapper label .round {
+    width: .9rem;
+    height: .9rem;
+    border: .15rem solid rgb(111, 156, 207);
+    border-radius: 6.25rem;
+    background-color: rgb(111, 156, 207);
+    transition: .4s;
+}
+
+label:hover .round {
+    border-color: #ffffff;    
+    background-color: #ffffff;
+}
+label:active .round {
+    background-color: #758996;
+    border-color: #ffffff;
+    
+}
+input[type='radio'] {
+    display: none;
+}
+
+#mem-1:checked~label.mem-1 .round {
+    background-color: #000000;
+    border-color: #ffffff;
+}
+#mem-1:checked~.slider .images-wrapper {
+    transform: translateX(0%);
+}
+#mem-1:checked~.slider-text .text-wrapper {
+    transform: translateY(0%);
+}
+
+#mem-2:checked~label.mem-2 .round {
+    background-color: #000000;
+}
+#mem-2:checked~.slider .images-wrapper {
+    transform: translateX(-25%);
+}
+#mem-2:checked~.slider-text .text-wrapper {
+    transform: translateY(-25%);
+}
+
+#mem-3:checked~label.mem-3 .round {
+    background-color: #000000;
+}
+#mem-3:checked~.slider .images-wrapper {
+    transform: translateX(-50%);
+}
+#mem-3:checked~.slider-text .text-wrapper {
+    transform: translateY(-50%);
+}
+
+#mem-4:checked~label.mem-4 .round {
+    background-color: #000000;
+}
+#mem-4:checked~.slider .images-wrapper {
+    transform: translateX(-75%);
+}
+#mem-4:checked~.slider-text .text-wrapper {
+    transform: translateY(-75%);
+}
+
+.wrapper .slider {
+    border-radius: 1.25rem;
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper .slider .images-wrapper {
+    width: 400%;
+    transition: .4s;
+    display: flex;
+}
+
+.wrapper .slider .images-wrapper .img {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+.img-1 {
+    height: 35vw;
+    background: center / cover no-repeat url('./images/mem-1.jpg');
+}
+.img-2 {
+    height: 35vw;
+    background: bottom center / cover no-repeat url('./images/mem-2.jpg');
+}
+.img-3 {
+    height: 35vw;
+    background: center / cover no-repeat url('./images/mem-3.jpg');
+}
+.img-4 {
+    height: 35vw;
+    background: center top / cover no-repeat url('./images/mem-4.jpg');
+}
+.wrapper .slider-text {    
+    max-height: 3rem;
+    overflow: hidden;
+    line-height: 1;
+    flex-grow: 1;
+}
+.wrapper .slider-text .text-wrapper {
+    width: 100%;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .slidet-text .text-wrapper p {
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        justify-content: center;
+    }
+    .wrapper .slider-text {
+        order: 4;
+        width: 100%;
+        max-height: 2rem;
+    }
+    .wrapper .slider-text p {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .img-4 {
+        background: center top / cover no-repeat url('./images/mem-4.jpg');
+    }
+
+}
